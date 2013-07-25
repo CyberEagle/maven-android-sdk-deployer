@@ -26,6 +26,7 @@ Contributors:
 - Thomas Prochazka https://github.com/tprochazka javadoc attachment
 - Shairon Toledo http://www.hashcode.eti.br doc update
 - Kohsuke Kawaguchi http://kohsuke.org/ webdav support for deployment
+- Fernando Camargo - Compatibility v7 AppCompat
 
 The Maven Android SDK Deployer is a helper maven project that can be
 used to install the libraries necessary to build Android applications
@@ -383,20 +384,36 @@ Then override `support-v4` or `support-v13` during installation:
                 -Dextras.compatibility.v13.artifactid=support-v13 \
                 -Dextras.compatibility.v13.version.prefix=r
 
-In order to use v7 extra, both dependencies (apklib & jar) are needed
+In order to use v7 GridLayout or AppCompat extra, both dependencies (apklib & jar) are needed
 
 ```xml
 <dependency>
   <groupId>android.support</groupId>
-  <artifactId>compatibility-v7</artifactId>
-  <version>13</version>
+  <artifactId>compatibility-v7-gridlayout</artifactId>
+  <version>18</version>
   <type>apklib</type>
 </dependency>
 
 <dependency>
   <groupId>android.support</groupId>
-  <artifactId>compatibility-v7</artifactId>
-  <version>13</version>
+  <artifactId>compatibility-v7-gridlayout</artifactId>
+  <version>18</version>
+  <type>jar</type>
+</dependency>
+```
+
+```xml
+<dependency>
+  <groupId>android.support</groupId>
+  <artifactId>compatibility-v7-appcompat</artifactId>
+  <version>18</version>
+  <type>apklib</type>
+</dependency>
+
+<dependency>
+  <groupId>android.support</groupId>
+  <artifactId>compatibility-v7-appcompat</artifactId>
+  <version>18</version>
   <type>jar</type>
 </dependency>
 ```
